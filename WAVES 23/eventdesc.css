@@ -1,0 +1,239 @@
+.container_for_text{
+		width : 100%;
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		color : white;
+		
+}
+
+.container_for_text h1{
+	font-size: 60px;
+	font-weight: 600;
+	color: #fff;
+
+}
+
+.tab-titles{
+
+	background: transparent;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 20px 0 40px;
+}
+
+.tab-links{
+	font-weight: 300;
+	font-size: 1.4rem;
+	
+	cursor: pointer;
+	color: white;
+	position: relative;
+}
+
+.tab-links::after{
+	content: '';
+	width: 0;
+	height: 3px;
+	background:#000080;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+}
+
+.tab-links.active-link::after
+{
+	width: 50%;
+}
+
+.tab-contents ul li{
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 200;
+	list-style: none;
+	margin: 10px 0;
+}
+.tab-links.active{
+	color: #084c61;
+}
+.tab-contents ul li span{
+	color:#000080;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+}
+
+.tab-contents{
+	width: 600px;
+	display: none;
+}
+.tab-contents.active-tab{
+	display: block;
+}
+
+.about_event{
+	padding: 30px;
+	box-shadow:  0 4px 14px 2px rgba(8, 143, 143, 0.3);
+	background: #088F8F;
+	border-radius: 15px;
+}
+.event_desc{
+	display: flex;
+	margin-bottom: 100px;
+	box-shadow:  0 4px 14px 2px rgba(0, 7, 41, 0.3);
+	width: 80%;
+	margin: auto;
+	border-radius: 20px;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	justify-content: center;
+}
+
+.event_desc img{
+	width: 500px;
+	margin-bottom: 30px;
+	height: 500px;
+}
+
+button{
+	height: 70px;
+	width: 200px;
+	
+	border-radius: 20px;
+	background-color:#000080;
+	border: 2px solid #000080;
+	color:white;
+
+}
+
+#contact p, #contact .p_text{
+	font-family: sans-serif;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #000080;
+	margin-bottom: 20px;
+
+}
+button:hover{
+	transform: scale(1.3);
+}
+#contact{
+	display: none;
+}
+#contact i{
+	margin-right: 10px;
+	background: transparent;
+}
+#contact.active-tab{
+	
+	display: flex;
+	margin:auto;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@media only screen and (max-width:920px){
+		.container_for_text h1{
+			font-size: 2rem;
+		}
+		.container_for_text{
+			
+			margin-top: 60px;
+		}
+	}
+@media only screen and (max-width:700px)
+{
+	.tab-contents{
+		
+		width: 250px;
+	}
+	.tab-contents ul li{
+		font-size: 1rem;
+	}
+
+	.event_desc img{
+		width: 250px;
+		margin-bottom: 30px;
+		height: 250px;
+	}
+
+	#contact p, #contact .p_text{
+		font-size: 1.2rem;
+	}
+	button{
+		height: 50px;
+	}
+	button:hover{
+	transform: scale(1.0);
+}
+}
+/*-------
+/* ------------------------STYLING FOR POP UP --------------------------*/
+.popup{
+		width : 500px;
+		background: #fff;
+		margin-top: -320px;
+		border-radius: 6px;
+		position: relative;
+		top: 0;
+		left: 50%;
+		
+		text-align: center;
+		padding: 0 30px 30px;
+		color: #333;
+		visibility: hidden;
+		top : 50%;
+		visibility: visible;
+		
+		transform: translate(-50%, -160%) scale(1.3);
+		transition: transform 0.4s, top 0.4s;
+	}
+
+	.popup img{
+		width : 100px;
+		margin-top: -50px;
+		border-radius: 50%;
+		box-shadow: 0 2px 5px rgba(0, 0, 0 ,0.2);
+		background-color: #075794;
+	}
+
+	.popup h2{
+		font-size: 38px;
+		font-weight: 500;
+		margin: 30px 0 10px;
+
+	}
+
+	.popup button{
+		width: 100%;
+		margin-top: 30px;
+		padding: 10px 0;
+		background: #075794;
+		color: #fff;
+		border: 0;
+		outline: none;
+		font-size: 18px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		box-shadow: 0 2px 5px rgba(0, 0, 0 ,0.2);
+	}
+
+	.close_popup{
+		/*top : 50%;
+		visibility: visible;
+		transform: translate(-50%, -160%) scale(1.3);*/
+		visibility: hidden;
+
+	}
+
+	.blur_body{
+		filter: blur(20px);
+		pointer-events: none;
+		user-select: none;
+	}
+
+	
+

@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+.main_container{
+	background: #97DECE;
+	width: 100%;
+	height: 100%;
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: -webkit-linear-gradient(#00545d, #000729);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  width: 100px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex:1;
+  justify-content: space-evenly;
+  list-style: none;
+}
+nav ul li{
+	width: 200px;
+  	padding: 12px;
+  	position: relative;
+  	text-align: center;
+}
+nav ul li a{
+	padding: 0px;
+  color: white;
+
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  
+}
+
+nav ul li.active, nav ul li:hover{
+  background: -webkit-linear-gradient(#00545d, #000729);
+  border-radius: 10px;
+  color: powderblue;
+  border-bottom: 2px solid white;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+nav input{
+	visibility: hidden;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    
+    display: block;
+  }
+  #click:checked ~.menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    align-items: center;
+    background: -webkit-linear-gradient(#00545d, #000729);
+ 
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+  	margin: auto;
+  }
+  nav ul li a{
+   
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+
+  .fa-sharp{
+  	display: none;
+  }
+ 
+}
+
+.fa-sharp{
+	margin-left: 12px;
+	color: white;
+
+	transition: 0.3s ease;
+}
+.submenu{
+	position: absolute;
+	display: none;
+
+	left: 0;
+	height: 0px;
+	top:105%;
+	transition: height 0.5s ease;
+	background: -webkit-linear-gradient(#00545d, #000729);
+	border-radius: 10px;
+}
+.submenu ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+
+}
+
+nav ul li:hover .submenu{
+	display: block;
+	height: 300px;
+}
+nav ul li:hover .fa-sharp{
+	transform: rotateZ(180deg);
+}

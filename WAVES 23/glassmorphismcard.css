@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d061a;
+    min-height: 100vh;
+}
+
+.gcontainer{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 30px;
+}
+
+.gcontainer .box{
+    position: relative;
+  
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: .5s;
+}
+
+.gcontainer .box::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: .5s;
+}
+
+.gcontainer .box::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: .5s;
+    filter: blur(30px);
+
+}
+
+.gcontainer .box:hover:before, .gcontainer .box:hover:after{
+    transform: skew(0deg);
+    left: 20px;
+    width: calc(100% - 90px);/*to change the width when hovered.*/
+}
+
+.gcontainer .box:nth-child(1):before, 
+.gcontainer .box:nth-child(1):after{
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.gcontainer .box:nth-child(2):before, 
+.gcontainer .box:nth-child(2):after{
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.gcontainer .box:nth-child(3):before, 
+.gcontainer .box:nth-child(3):after{
+    background: linear-gradient(315deg, #4dff03, #ff0058);
+}
+
+.gcontainer .box span{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    pointer-events: none;
+    z-index: 40;
+}
+
+.gcontainer .box span::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    background: rgba(255, 255 , 255, 0.1);
+    animation:animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.5);
+}
+
+
+.gcontainer .box:hover span::before{
+    top: -50px;
+    left:50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+
+.gcontainer .box span::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    background: rgba(255, 255 , 255, 0.1);
+    animation:animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.5);
+    animation-delay: -1s;
+}
+
+
+.gcontainer .box:hover span::after{
+    
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+.gcontainer .box .content{
+    z-index: 10;
+    position: relative;
+    padding: 20px 40px;
+   
+    background-color: rgba(255, 255 , 255, 0.05);
+    left: 0;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    color: #fff;
+}
+
+
+.gcontainer .box:hover .content{
+    left: -25px;
+    padding: 60px 40px;
+}
+
+
+.gcontainer .box .content h2{
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.gcontainer .box .content p{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.4rem;
+}
+
+.gcontainer .box .content button{
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #111;
+    background-color: #fff;
+    padding: 10px;
+    border:none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .5s;
+    margin-top: 5px;
+}
+.gcontainer .box .content button:hover {
+    opacity: 0.6;
+}
+
+.content .cover_i{
+    float: left;
+    margin-right: 20px;
+}
+
+.cover_i img{
+    
+    display: block;
+    width:120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+
+@media only screen and (max-width:630px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

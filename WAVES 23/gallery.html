@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="headerstyle.css">
+	<link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+<style>
+	.hero{
+		background: linear-gradient(315deg, #03a9f4, #ff0058);
+
+	}
+</style>
+<body>
+	<div class = "hero">
+		<nav>
+		 <img src="images/logo.png" class = "logo">
+
+         <input type="checkbox" id="click">
+           <label for="click" class="menu-btn">
+           <i class="fas fa-bars"></i>
+           </label>
+
+         <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Events</a>
+            	<i class="fa-sharp fa-solid fa-caret-down" id = "ch1"></i>
+            	<div class = "submenu">
+            		<ul>
+            			<li><a>event 1</a></li>
+            			<li><a>event 1</a></li>
+            			<li><a>event 1</a></li>
+            			<li><a>event 1</a></li>
+            		</ul>
+            	</div>
+            </li>
+            <li><a href="#">Workshops</a></li>
+            <li><a href="#">Login|Register</a></li>
+         </ul>
+      </nav>
+
+      <input type="radio" id = "check1" name = "photos" checked/>
+      <input type="radio" id = "check2" name = "photos"/>
+      <input type="radio" id = "check3" name = "photos"/>
+      <!--input type="radio" name="" id = "check4" name = "photos"/-->
+
+      <div class="container">
+      	<h1>OUR PHOTO GALLERY</h1>
+      	<div class="top-content">
+      		<h3>Photo</h3>
+      		<label for = "check1">All Photos</label>
+      		<label for = "check2">Ripples</label>
+      		<label for = "check3">Waves</label>
+      		<!--label for = "check4">Celebration</label-->
+      	</div>
+		<div class="photo-gallery">
+			<div class="pic place">
+				<img src = "images/mahe.jpg">
+			</div>
+			<div class="pic family">
+				<img src = "images/group.jpg">
+			</div>
+			<div class="pic child">
+				<img src = "images/profile1.jpg">
+			</div>
+
+			<div class="pic place">
+				<img src = "images/profile2.jpg">
+			</div>
+			<div class="pic family">
+				<img src = "images/group.jpg">
+			</div>
+			<div class="pic child">
+				<img src = "images/profile1.jpg">
+			</div>
+
+			<div class="pic place">
+				<img src = "images/profile3.jpg">
+			</div>
+			<div class="pic family">
+				<img src = "images/group.jpg">
+			</div>
+			<div class="pic child">
+				<img src = "images/profile1.jpg">
+			</div>
+
+			<div class="pic place">
+				<img src = "images/mahe.jpg">
+			</div>
+			<div class="pic family">
+				<img src = "images/profile4.jpg">
+			</div>
+			<div class="pic child">
+				<img src = "images/profile1.jpg">
+			</div>
+
+			<div class="pic place">
+				<img src = "images/mahe.jpg">
+			</div>
+			<div class="pic family">
+				<img src = "images/profile6.jpg">
+			</div>
+			<div class="pic child">
+				<img src = "images/profile1.jpg">
+			</div>
+		</div>
+      </div>
+	  <footer>
+		<p>©2022 Copyrights ----All rights Reserved<p>
+		<p>This Site is developed by Ripples Team for the Official Edition of Ripples</p>
+  </footer>
+</div>
+
+</body>
+</html>

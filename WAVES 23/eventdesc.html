@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://kit.fontawesome.com/fbf340fc9e.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="eventdesc.css">
+	<link rel="stylesheet" type="text/css" href="headerstyle.css">
+</head>
+<body>
+	<div class = "hero">
+		<nav>
+		 <img src="images/logo.png" class = "logo">
+
+         <input type="checkbox" id="click">
+           <label for="click" class="menu-btn">
+           <i class="fas fa-bars"></i>
+           </label>
+
+         <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Events</a>
+            	<i class="fa-sharp fa-solid fa-caret-down"></i>
+            	<div class = "submenu">
+            		<ul>
+            			<li><a>event 1</a></li>
+            			<li><a>event 1</a></li>
+            			<li><a>event 1</a></li>
+            			<li><a>event 1</a></li>
+            		</ul>
+            	</div>
+            </li>
+            <li><a href="#">Workshops</a></li>
+            <li><a href="#">Login|Register</a></li>
+         </ul>
+      </nav>
+		<div class = "container_for_text">
+  	<!--h1 style = "text-align: left">TECHNICAL EVENTS -</h1-->
+		<h1><span class = "auto_type"></span></h1>
+		</div>
+
+		<div class="event_desc">
+			<img src="images/tech1.jpeg">
+			<div class="about_event">
+
+				<div class = "tab-titles">
+						<p class="tab-links active-link" onclick = "openTab('about')">About</p>
+						<p class="tab-links" onclick = "openTab('rules')">Rules</p>
+						<p class="tab-links" onclick = "openTab('contact')">Contact</p>
+
+				</div>
+				
+					<div class="tab-contents active-tab" id = "about">
+						<ul>
+							<li>This event comprises of 2 rounds</li>
+							<li style="font-weight: bold;"><span>Round 1</span></li>
+							<li>The event comprises of 20 aptitude questions which will kindle your knowledge<br>
+							on logical ability, core programming skills.</li>
+							<li>There would be a card game to test your observation skills</li>
+							<li>The decision of judge panel is panel</li>
+							<li style="font-weight: bold;"><span>Round 2</span></li>
+							<li>In this round the participants will be provided with an product related to electrical and electronics domain, and the participants are given a preparation time of 5 minutes followed by which they shoudl present their topic</li>
+
+						</ul>
+
+					</div>
+
+					<div class="tab-contents" id = "rules">
+						<ul>
+							<li>Team can consist of 2 to a max of 3 members.</li>
+							<li>No use of calculator.</li>
+							<li>Indulging in malpractice will lead to disqualification of team.</li>
+							<li>The decision of the organisers and the judge panel is final.</li>
+
+						</ul>
+					</div>
+
+					<div class="tab-contents" id = "contact">
+						<p>Mahendar P</p>
+						<p><i class="fa-solid fa-phone"></i>9167580432</p>
+
+		    		<!--form method = "POST" action = "/te1/">
+							
+			    		<button type = "submit"><p id = "demo" style = "color:white; margin-top: 10px;"class = "p_text">Register</p></button> 
+		    		</form-->
+		    		<button type = "submit" onclick="openPopup()"><p id = "demo" style = "color:white; margin-top: 10px;"class = "p_text">Register</p></button> 
+					</div>
+				
+				</div>
+			</div>
+		
+
+		<!--------------FOR TYPING ANIMATION------------>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+		<script>
+	var typed = new Typed(".auto_type",{
+		strings:["Fast and Furious...."],
+		typeSpeed : 60,
+		backSpeed : 60,
+		loop : true,
+	})
+
+	</script>
+
+	<!------------------------------------------------------>
+		
+
+	<!-------------------------------------------FOR POPUP--------------------------------->
+	<!---------------POP UP SHOULD ALWAYS BE AT LAST SO THAT IT WOULD BE EASY TO BLUR THE BODY WHEN IT IS CALLED OTHERWISE THE WHOLE BODY INCLUDING POPUP WILL BE BLURRED-->
+	<!--SINCE WE ARE STORING THE REGISTRATIONS IN DB WE WILL REDIRECT FROM THERE HENCE POP UP WILL NOT WORK THUS ONLY WITH THE HELP OF MESSAGE WE GIVE IN THE VIEWS.PY WE CAN PRINT CONFIRMATION -->
+				
+
+						
+						
+					<!--------------------------------------------------------------------------------------->
+
+<footer style="margin-top: 50px;">
+  		<p>©2022 Copyrights ----All rights Reserved<p>
+  		<p>This Site is developed by Ripples Team for the Official Edition of Ripples</p>
+	</footer>
+
+<script>
+	const tablinks = document.getElementsByClassName('tab-links');
+		var tabcontents = document.getElementsByClassName('tab-contents');
+		/*the below method will make sure that one tab will be open when loading the screen*/
+		//tablinks[0].click()
+		function openTab(tabname){
+			for(tablink of tablinks){
+				tablink.classList.remove('active-link');
+			}
+			for(tabcontent of tabcontents)
+			{
+				tabcontent.classList.remove('active-tab');
+			}
+
+			event.currentTarget.classList.add("active-link");
+
+			document.getElementById(tabname).classList.add("active-tab");
+
+		}
+</script>
+<script>
+
+		function change(){
+			document.getElementById("demo").innerHTML = "Registered successfully";
+		}
+
+
+		let popup = document.getElementById("popup");
+		let body = document.getElementById("con");
+		function openPopup(){
+			popup.classList.add("popup");
+			document.getElementById("demo").innerHTML = "Registered successfully";
+			body.classList.add("blur_body");
+		}
+
+
+		function closePopup(){
+			popup.classList.add("close_popup");
+			body.classList.remove("blur_body");
+		}
+
+
+
+
+
+</script>
+	</div>
+</body>
+</html>

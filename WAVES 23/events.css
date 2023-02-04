@@ -1,0 +1,131 @@
+.container_for_text{
+	width : 100%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color : white;
+		
+}
+
+.container_for_text h1{
+	font-size: 60px;
+	margin-top: 0px;
+	font-weight: 600;
+	color: white;
+
+}
+	.container{
+		
+		display: inline-flex;
+		flex-wrap: wrap;
+		height : 100%;
+		overflow: hidden;
+		width: 100%;
+		margin-top: 25px;
+		margin-bottom: 50px;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+
+	.sub_container{
+		height: 400px;
+		width: 350px;
+		position: relative;
+		margin-bottom: 20px;
+		background-position: center;
+		background-size: cover;
+		
+	}
+
+	.container .sub_container .icon{
+		position: absolute;
+		left: 0;
+		background-size: cover;
+		max-width: 100%;
+		background-position: center;
+		width: 100%;
+		height: 400px;
+		transition: 0.5s;
+		z-index: 1;
+	}
+	.container .sub_container .head{
+		text-align: center;
+		color: white;
+		background: #0dbdb4;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.1rem;
+
+	}
+	.container .sub_container:hover .icon 
+	{
+		top: 40px;
+		left: calc(50% - 90px);
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+
+	}
+	.container .sub_container:hover{
+		box-shadow:  0 4px 14px 2px rgba(0, 7, 41, 0.3);
+	}
+	.container .sub_container:hover .head{
+		color: transparent;
+	}
+	
+	.container .sub_container .content{
+		position: absolute;
+		top: 250px;
+		height: calc(100% - 100px);
+		text-align: center;
+		font-size: 1.2rem;
+		color: #3A8891;
+		font-weight: 1200;
+		padding: 20px;
+		box-sizing: border-box;
+
+	}
+
+	.container .sub_container .content a{
+		text-decoration: none;
+		font-weight: 600;
+		color: #0E5E6F;
+		font-size: 2rem;
+	}
+
+	.container .sub_container .content a:hover{
+		color: white;
+	}
+	
+	.text
+	{
+		color: transparent;
+		font-weight: 300;
+		background: transparent;
+		display: none;
+		
+	}
+	@media only screen and (max-width:920px){
+		.container_for_text h1{
+			font-size: 2rem;
+		}
+		.container_for_text{
+			
+			margin-top: 60px;
+		}
+		#ch1{
+			display: none;
+		}
+	}
+
+/*--------------------------STYLING FOR TYPING TEXT----------------------------*/
+
+
+span{
+	color: #00545d;
+}
+
+
+
+
