@@ -1,0 +1,228 @@
+.whole_team{
+    width:90%;
+    margin: 40px auto 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+}
+
+.image_handler{
+    bottom: 0px;
+    width: 100%;
+  
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+}
+
+.image_handler img{
+    
+    width: 50px;
+    
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 100000000;
+    animation :animatei 7s ease-in-out infinite;
+    
+}
+.image_handler img:nth-child(3n){
+    animation-delay: -3.5s;
+    transform: translateY(-10px);
+}
+.image_handler img:nth-child(3n+1){
+    animation-delay: -2.3s;
+    transform: translateY(14px);
+}
+
+.image_handler img:nth-child(3n+2){
+    animation-delay: -1s;
+    transform: translateY(-20px);
+}
+
+@keyframes animatei{
+     0%{
+            transform: translateY(0);
+            opacity: 0;
+            
+        }
+
+        50%{
+           
+            opacity: 1;
+        }
+
+        70%{
+            
+            opacity: 1;
+        }
+
+        100%{
+            transform: translateY(-400vh);
+            opacity: 0;
+            
+        }
+}
+
+
+.team_st{
+	font-weight: normal;
+	margin: 40px auto;
+    font-size: 2.4rem;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+.team_st::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height:3px;
+    background-color:#fff;
+    bottom:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation:animate2 4s linear infinite;
+}
+
+@keyframes animate2{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.box{
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+}
+
+.box span{
+    display: block;
+    pointer-events: none;
+    /*position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+*/
+    z-index: 40;
+}
+
+.box span::before{
+    content: '';
+    position: absolute;
+    top:-20px;
+    left:-20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    /*background: linear-gradient(300deg, #03a9f4 , #ff0058 );*/
+    background: rgba(255, 255 , 255, 0.1);
+    animation:animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.5);
+}
+
+.box span::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    background: rgba(255, 255 , 255, 0.1);
+    
+    animation:animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.5);
+}
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+.content{
+    z-index: 10;
+    position: relative;
+    padding: 20px 40px;
+   
+    background-color: rgba(255, 255 , 255, 0.05);
+    left: 0;
+    border-radius: 20px;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    color: #fff;
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.content:hover{
+    transform: translateY(-10px);
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.cover_i{
+    
+    display: block;
+    width:220px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+.content h2{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+.content p{
+
+    font-size: 1.1rem;
+}
+.content button{
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #111;
+    background-color: #fff;
+    padding: 10px;
+    border:none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .5s;
+    margin-top: 5px;
+}
+
+.content button:hover{
+    opacity: 0.6;
+}
