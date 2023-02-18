@@ -44,7 +44,9 @@
 
 .single_event{
     transform-style: preserve-3d;
+    
 }
+
 .event_card{
     position: relative;
     border-radius: 20px;
@@ -59,7 +61,7 @@
     border-left: 1px solid rgba(255, 255, 255, 0.75);
     border-radius: 20px;
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
-  transform-style: preserve-3d;
+
     backdrop-filter: blur(10px);    
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.75);
@@ -68,8 +70,6 @@
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
     transform-style: preserve-3d;
 }
-
-
 .event_no{
     position: absolute;
     top: 50px;
@@ -139,7 +139,7 @@
     flex-direction: column;
     gap: 20px;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background: rgba(255, 255, 255, 0.2);
     transform: translateZ(80px);
     backdrop-filter: blur(10px);
