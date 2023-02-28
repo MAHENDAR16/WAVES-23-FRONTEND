@@ -54,7 +54,7 @@
 .content_p{
 	z-index: 10;
     position: relative;
-    padding: 20px 60px;
+    padding: 20px 30px;
     background-color: rgba(255, 255 , 255, 0.07);
     left: 0;
     width: 70%;
@@ -135,4 +135,8 @@
 	.content_p{
 		font-size: 1rem;
 	}
+    .content_p span::before, .content_p span::after{
+        width: 75px;
+        height: 75px;
+    }
 }

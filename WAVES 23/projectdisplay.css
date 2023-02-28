@@ -27,9 +27,9 @@
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.07);
 	box-shadow: 0 5px 15px 5px rgba(255, 255, 255, 0.07);
-	backdrop-filter: blur(200px);
+	backdrop-filter: blur(0px);
 	padding: 20px;
 	border-radius: 10px;
 }
@@ -130,6 +130,24 @@
 @media only screen and (max-width:900px){
 	.single_p{
 		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width:500px){
+	.single_p{
+		flex-direction: column;
+		font-size: 0.9rem;
+	}
+	.single_p img{
+	width: 180px;
+	height: 180px;
+	
+	border-radius: 20px;
+	}	
+
+	.content_p span::after,.content_p span::before{
+		width: 75px;
+		height: 75px;
 	}
 }
 

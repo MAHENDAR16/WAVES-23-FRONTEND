@@ -40,6 +40,7 @@ body{
     top:0;
     left: 50px;
     width: 50%;
+    
     height: 100%;
     background: #fff;
     border-radius: 8px;
@@ -47,7 +48,7 @@ body{
     transition: .5s;
 }
 
-.gcontainer .box::after{
+/*.gcontainer .box::after{
     content: '';
     position: absolute;
     top:0;
@@ -61,11 +62,11 @@ body{
     filter: blur(30px);
 
 }
-
+*/
 .gcontainer .box:hover:before, .gcontainer .box:hover:after{
     transform: skew(0deg);
     left: 20px;
-    width: calc(100% - 90px);/*to change the width when hovered.*/
+    width: calc(100% - 100px);/*to change the width when hovered.*/
 }
 
 .gcontainer .box:nth-child(1):before, 
@@ -85,6 +86,7 @@ body{
 
 .gcontainer .box span{
     display: block;
+    /*THE BELOW POS ABSOLUTE AND THE TOP LEFT VALUES ARE IMP OTHERWISE THE SMALL BOX WILL GO BACK THE MAIN BOX*/
     position: absolute;
     top:0;
     left:0;
@@ -99,8 +101,7 @@ body{
     position: absolute;
     top:0;
     left:0;
-    width: 100%;
-    height: 100%;
+   
     border-radius: 8px;
     opacity: 0;
     backdrop-filter: blur(10px);
@@ -228,5 +229,19 @@ body{
         justify-content: center;
         align-items: center;
 
+    }
+    .gcontainer{
+        gap: 60px;
+    }
+
+    .gcontainer .box:hover span::before{
+        width: 75px;
+        height: 75px;
+        left: 10px;
+
+    }
+    .gcontainer .box:hover span::after{
+        width: 75px;
+        height: 75px;   
     }
 }
