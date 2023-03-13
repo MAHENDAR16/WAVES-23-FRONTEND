@@ -221,8 +221,9 @@ body{
 }
 
 
-@media only screen and (max-width:630px){
+@media only screen and (max-width:400px){
     .content{
+
         display: flex;
         flex-direction: column;
         gap:20px;
@@ -235,13 +236,15 @@ body{
     }
 
     .gcontainer .box:hover span::before{
-        width: 75px;
-        height: 75px;
-        left: 10px;
+        width: 45px;
+        height: 45px;
+        top: -70px;
+        left: -20px;
 
     }
     .gcontainer .box:hover span::after{
-        width: 75px;
-        height: 75px;   
+        width: 45px;
+        height: 45px;   
+        bottom: -70px;
     }
 }
