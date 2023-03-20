@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://kit.fontawesome.com/fbf340fc9e.js" crossorigin="anonymous"></script>
+	<!-- FOR SWIPPER IN IMAGE SLIDDER----------->
+	<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<!-----------------ANIMATE ON SCROLL LIBRARY------------------->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-------------------------------------------------------------------->
+	<link rel="stylesheet"  href="hackathon.css">
+</head>
+<body>
+	<div class="main_desc">
+		<div class="quote">
+		
+			<h1>
+				<i class="fa-solid fa-quote-left"></i>
+				Hackathon on Sustainability, Climatic Change
+				<i class="fa-solid fa-quote-right"></i>
+			</h1>
+		</div>
+		
+		<div class="quote">
+		
+			<h1>
+				<i class="fa-solid fa-quote-left"></i>
+				Intern Opportunities for winners
+				<i class="fa-solid fa-quote-right"></i>
+			</h1>
+		</div>
+		<div class="single_desc">
+			<div class="swiper">
+					<!--div class="swiper"-->
+						  <!-- Additional required wrapper -->
+						  <div class="swiper-wrapper">
+						    <!-- Slides/images -->
+						    <div class="swiper-slide"><img src = "images/ev.jpg"></div>
+						    <div class="swiper-slide"><img src = "images/group.jpg"></div>
+						    <div class="swiper-slide"><img src = "images/ev.jpg"></div>
+						    
+						  </div>
+						  <!-- If we need pagination -->
+						  <div class="swiper-pagination"></div>
+
+						  <!-- If we need navigation buttons -->
+						  <div class="swiper-button-prev"></div>
+						  <div class="swiper-button-next"></div>
+
+						  <!-- If we need scrollbar -->
+						  <!--div class="swiper-scrollbar"></div>
+						</div-->
+					<!--/div-->
+			</div>
+
+			<div class="single_desc_right">
+				<h1>Rules</h1>
+				<ul>
+					<li>Each team can consist a max of 3 people.</li>
+					<li>Participants should bring their own laptop</li>
+				</ul>
+				<button>Register -></button>
+			</div>
+		</div>
+		<hr>
+		<div class="round_desc">
+			<div class="single_round" data-aos="fade-down-right" 
+    data-aos-duration="800"
+    data-aos-easing="ease-in-out">
+				<div class="left_r">
+					<span>Round 1</span>
+				</div>
+				<span class="round_center"></span>
+				<div class="right_r">
+					<p>The running cost of an electric vehicle is much lower than an equivalent petrol or diesel vehicle. Electric vehicles use electricity to charge their batteries instead of using fossil fuels like petrol or diesel. Electric vehicles are more efficient</p>
+					<button>Register -></button>
+				</div>
+			</div>
+			<hr>
+			<div class="single_round" data-aos="fade-down-left" 
+    data-aos-duration="800"
+    data-aos-easing="ease-in-out">
+				<div class="left_r" >
+					<span>Round 2</span>
+				</div>
+				<span class="round_center"></span>
+				<div class="right_r">
+					<p>The running cost of an electric vehicle is much lower than an equivalent petrol or diesel vehicle. Electric vehicles use electricity to charge their batteries instead of using fossil fuels like petrol or diesel. Electric vehicles are more efficient</p>
+					<button>Register -></button>
+				</div>
+			</div>
+			<hr>
+			<div class="single_round" data-aos="fade-down-right" 
+    data-aos-duration="800"
+    data-aos-easing="ease-in-out">
+				<div class="left_r" >
+					<span>Round 3</span>
+				</div>
+				<span class="round_center"></span>
+				<div class="right_r">
+					<p>The running cost of an electric vehicle is much lower than an equivalent petrol or diesel vehicle. Electric vehicles use electricity to charge their batteries instead of using fossil fuels like petrol or diesel. Electric vehicles are more efficient</p>
+					<button>Register -></button>
+				</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+	<h1 class="team_st">OUR MENTORS</h1>
+	<div class="alumni_group">
+		
+		
+	      	<div class="single_team">
+	      		<img src="images/profile1.jpg">
+	      		<h1>name</h1>
+	      		<p>designation</p>
+	      		
+	      	</div>
+
+	      	<div class="single_team">
+	      		<img src="images/profile1.jpg">
+	      		<h1>name</h1>
+	      		<p>designation</p>
+	      		
+	      	</div>
+
+	      	<div class="single_team">
+	      		<img src="images/profile1.jpg">
+	      		<h1>name</h1>
+	      		<p>designation</p>
+	      		
+	      	</div>
+
+      
+	</div>
+	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+	const swiper = new Swiper('.swiper', {
+	  // Optional parameters
+	  //direction: 'vertical',
+	  autoplay:{
+	  	delay:2500,
+	  	disableOnInteraction:false,
+	  },
+	  loop: true,
+
+	  // If we need pagination
+	  pagination: {
+	    el: '.swiper-pagination',
+	    clickable:true,//then only when we click the dots the imag moves
+	  },
+
+	  // Navigation arrows
+	  navigation: {
+	    nextEl: '.swiper-button-next',
+	    prevEl: '.swiper-button-prev',
+	  },
+
+	  // And if we need scrollbar
+	  //scrollbar: {
+	    //el: '.swiper-scrollbar',
+	  //},
+});
+</script>
+
+<!---------------------SCRIPT FOR REVEAL ON ANIMNATION-------------->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(
+    	{
+    		
+  			mirror: false,
+    	});
+  </script>
+
+<!------------------------------------------------->
+
+</body>
+</html>
